@@ -14,3 +14,15 @@ export const PageLine = Styled.div`
   height: 1px;
   background-color: #677294;
 `;
+
+export const Box = Styled.div`
+  width:100%;
+  min-height:65vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: -1px;
+  color: #878787;
+`;

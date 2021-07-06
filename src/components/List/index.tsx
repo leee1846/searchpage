@@ -17,47 +17,56 @@ const List = () => {
   const [venueListPerPage, setVenueListPerPage] = useState(venueList);
 
   useEffect(() => {
-    setVenueListPerPage(() =>
-      venueList.filter((item) => {
-        const nextLength = pageNumber * 5;
-
-        return item.id > nextLength - 5 && item.id <= nextLength;
-      })
-    );
-  }, [pageNumber]);
-
+    if (venueList) {
+      setVenueListPerPage(() =>
+        venueList.filter((item, index) => {
+          const nextLength = pageNumber * 5;
+          const id = index + 1;
+          return id > nextLength - 5 && id <= nextLength;
+        })
+      );
+    } else {
+      setVenueListPerPage([]);
+    }
+  }, [venueList, pageNumber]);
   return (
     <S.Container>
-      <ListTitle amountOfList={venueList.length} />
+      <ListTitle amountOfList={venueList ? venueList?.length : 0} />
       <S.TotalLine>
         <S.PageLine />
       </S.TotalLine>
-      {venueListPerPage.map((item) => {
-        const {
-          id,
-          imageUrl,
-          hostName,
-          venueName,
-          address,
-          pricePerHour,
-          minHour,
-          type,
-        } = item;
-        return (
-          <Item
-            key={id}
-            imgUrl={imageUrl}
-            hostName={hostName}
-            venueName={venueName}
-            type={type}
-            address={address}
-            pricePerHour={pricePerHour}
-            minHour={minHour}
-          />
-        );
-      })}
+      {venueListPerPage[0] ? (
+        venueListPerPage?.map((item) => {
+          const {
+            id,
+            imageUrl,
+            hostName,
+            venueName,
+            address,
+            pricePerHour,
+            minHour,
+            type,
+          } = item;
+          return (
+            <Item
+              key={id}
+              imgUrl={imageUrl}
+              hostName={hostName}
+              venueName={venueName}
+              type={type}
+              address={address}
+              pricePerHour={pricePerHour}
+              minHour={minHour}
+            />
+          );
+        })
+      ) : (
+        <S.Box>
+          <p>진행중인 행사가 없습니다.</p>
+        </S.Box>
+      )}
       <Pagination
-        amountOfVenues={venueList.length}
+        amountOfVenues={venueList ? venueList?.length : 1}
         setPageNumber={setPageNumber}
         pageNumber={pageNumber}
       />

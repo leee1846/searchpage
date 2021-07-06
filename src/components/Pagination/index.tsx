@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { useState, useEffect } from "react";
 import leftIcon from "../../assets/images/arrow_left.svg";
 import rightIcon from "../../assets/images/arrow_right.svg";
 import * as S from "./style";
@@ -9,22 +10,30 @@ interface Props {
   pageNumber: number;
 }
 const Pagination = ({ amountOfVenues, setPageNumber, pageNumber }: Props) => {
+  const [currentPages, setCurrentPages] = useState<number[]>([]);
+
   const totalPages = Math.ceil(amountOfVenues / 5);
   const countPages = () => {
-    const finalPages = [];
+    const countedPages = [];
     if (totalPages < 6) {
-      for (let i = 1; i <= totalPages; i++) {
-        finalPages.push(i);
+      if (!totalPages) {
+        countedPages.push(1);
+      } else {
+        for (let i = 0; i < totalPages; i++) {
+          countedPages.push(i + 1);
+        }
       }
-      return finalPages;
+      return countedPages;
     }
     for (let i = 1; i <= 5; i++) {
-      finalPages.push(i);
+      countedPages.push(i);
     }
-    return finalPages;
+    return countedPages;
   };
 
-  const [currentPages, setCurrentPages] = useState(countPages());
+  useEffect(() => {
+    setCurrentPages(() => countPages());
+  }, [amountOfVenues]);
 
   const onPageNumberClick = (pageNumber: number) => {
     setPageNumber(() => pageNumber);
