@@ -1,12 +1,14 @@
 import React from "react";
 import GlobalStyle from "./styles/reset";
+import Header from "./components/Header/index";
+import Layout from "./styles/Layout";
 
 function App() {
   return (
-    <div>
+    <Layout>
       <GlobalStyle />
-      <p>강당.강의실sasdasd</p>
-    </div>
+      <Header />
+    </Layout>
   );
 }
 
