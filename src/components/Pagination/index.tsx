@@ -5,6 +5,7 @@ import rightIcon from "../../assets/images/arrow_right.svg";
 import * as S from "./style";
 import { useDispatch } from "react-redux";
 import { changePageNumber } from "../../stores/PageNumberReducer";
+import toScrollTop from "./../../util/toScrollTop";
 
 interface Props {
   amountOfVenues: number;
@@ -39,6 +40,7 @@ const Pagination = ({ amountOfVenues, pageNumber }: Props) => {
 
   const onPageNumberClick = (currentPage: number) => {
     dispatch(changePageNumber(currentPage));
+    toScrollTop();
   };
 
   const onLeftClick = () => {
@@ -50,6 +52,7 @@ const Pagination = ({ amountOfVenues, pageNumber }: Props) => {
           return prev.map((pageNum) => pageNum - 1);
         });
       }
+      toScrollTop();
     }
   };
 
@@ -62,6 +65,7 @@ const Pagination = ({ amountOfVenues, pageNumber }: Props) => {
           return prev.map((pageNum) => pageNum + 1);
         });
       }
+      toScrollTop();
     }
   };
 

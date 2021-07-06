@@ -1,13 +1,11 @@
 import React from "react";
 import topIcon from "../../assets/images/arrow_up.svg";
 import * as S from "./style";
+import toScrollTop from "./../../util/toScrollTop";
 
 const ToTop = () => {
   const onClick = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+    toScrollTop();
   };
 
   return (
