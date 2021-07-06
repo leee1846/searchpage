@@ -2,3 +2,9 @@
   font-family: "NotoSansCJKkr";
   src: url("../assets/fonts/NotoSansCJKkr-Regular.otf");
 }
+
+@font-face {
+  font-family: "NotoSansCJKkr";
+  src: url("../assets/fonts/NotoSansCJKkr-Light.otf");
+  font-weight: 300;
+}
