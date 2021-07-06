@@ -1,0 +1,504 @@
+{
+  "venueList": [
+    {
+      "id": 1,
+      "type": "approval",
+      "imageUrl": "https://img.shareit.kr/prod/img/2021-05-20/3829bbbf-ad6f-4641-bc14-9aabc550d138.jpg",
+      "hostName": "앙트레블",
+      "venueName": "루프탑",
+      "address": "서울 강남구 강남대로102길 45",
+      "pricePerHour": 70000,
+      "minHour": 3
+    },
+    {
+      "id": 2,
+      "type": "approval",
+      "imageUrl": "https://img.shareit.kr/prod/img/2021-05-21/9494961b-b85b-40f1-822c-967fb0059039.jpg",
+      "hostName": "컴온살롱",
+      "venueName": "파티룸/공유주방",
+      "address": "서울 강남구 학동로11길 57",
+      "pricePerHour": 60000,
+      "minHour": 3
+    },
+    {
+      "id": 3,
+      "type": "approval",
+      "imageUrl": "https://img.shareit.kr/prod/img/2021-04-30/86cfb071-2cb4-4f9f-846d-da212fa2edba.jpg",
+      "hostName": "리스타일라운지",
+      "venueName": "메인 스튜디오",
+      "address": "서울 강남구 논현동 240-16",
+      "pricePerHour": 120000,
+      "minHour": 2
+    },
+    {
+      "id": 4,
+      "type": "realtime",
+      "imageUrl": "https://img.shareit.kr/prod/img/2021-04-21/a1ce5563-9754-42b3-9580-cafd857fc3ca.jpg",
+      "hostName": "모임공간235",
+      "venueName": "스터디룸/회의룸/파티룸",
+      "address": "서울 서초구 강남대로 365",
+      "pricePerHour": 39000,
+      "minHour": 3
+    },
+    {
+      "id": 5,
+      "type": "realtime",
+      "imageUrl": "https://img.shareit.kr/prod/img/2021-03-29/d5f4e46f-e819-46fc-b3db-32d306ec756a.jpg",
+      "hostName": "아룸",
+      "venueName": "단독 파티룸&스튜디오",
+      "address": "서울 강남구 논현로85길 5-5",
+      "pricePerHour": 60000,
+      "minHour": 3
+    },
+    {
+      "id": 6,
+      "type": "realtime",
+      "imageUrl": "https://img.shareit.kr/prod/img/2021-03-24/f03f73d4-6167-4ab6-b27a-f9559361dbfc.jpg",
+      "hostName": "벨리니스튜디오",
+      "venueName": "메인홀과 테라스",
+      "address": "서울 강남구 신사동 516",
+      "pricePerHour": 60000,
+      "minHour": 2
+    },
+    {
+      "id": 7,
+      "type": "approval",
+      "imageUrl": "https://img.shareit.kr/prod/img/2021-04-14/102fced2-78a0-429a-a8b3-358a6b58c022.jpg",
+      "hostName": "프로젝트 자올",
+      "venueName": "공유 공간",
+      "address": "서울 강남구 도산대로17길 8",
+      "pricePerHour": 100000,
+      "minHour": 2
+    },
+    {
+      "id": 8,
+      "type": "approval",
+      "imageUrl": "https://img.shareit.kr/prod/img/2021-04-13/0f585c48-6184-4566-ae6b-5e91e3eb281a.jpg",
+      "hostName": "프랑꼬아트랩",
+      "venueName": "스튜디오",
+      "address": "서울 강남구 역삼동 616-7",
+      "pricePerHour": 50000,
+      "minHour": 1
+    },
+    {
+      "id": 9,
+      "type": "approval",
+      "imageUrl": "https://img.shareit.kr/prod/img/2021-04-08/ae632943-bb4e-4469-9016-46c5bf455c50.jpg",
+      "hostName": "픽랩",
+      "venueName": "메인홀",
+      "address": "서울 강남구 도산대로55길 40",
+      "pricePerHour": 40000,
+      "minHour": 1
+    },
+    {
+      "id": 10,
+      "type": "realtime",
+      "imageUrl": "https://img.shareit.kr/prod/img/2021-04-07/08fe0fdc-9282-40f3-831c-fab3808d3182.jpg",
+      "hostName": "XOXO ROOM",
+      "venueName": "루프탑 파티룸 회의실",
+      "address": "서울특별시 강남구 논현로79길 62",
+      "pricePerHour": 48000,
+      "minHour": 3
+    },
+    {
+      "id": 11,
+      "type": "realtime",
+      "imageUrl": "https://img.shareit.kr/prod/img/2021-06-03/42c2f1c1-0793-4f08-b532-149d90a73d0f.jpg",
+      "hostName": "모아N비즈스퀘어 종로점",
+      "venueName": "종로 코워킹스페이스MoA",
+      "address": "서울 종로구 종로 80-2",
+      "pricePerHour": 16500,
+      "minHour": 5
+    },
+    {
+      "id": 12,
+      "type": "realtime",
+      "imageUrl": "https://img.shareit.kr/prod/img/2021-06-02/e4a9017a-d612-45c3-ba3f-1213fa61428f.jpg",
+      "hostName": "모아N비즈스퀘어 홍대 레인보우점",
+      "venueName": "홍대 코워킹스페이스MoA",
+      "address": "서울 서대문구 연희로2길 76",
+      "pricePerHour": 16500,
+      "minHour": 5
+    },
+    {
+      "id": 13,
+      "type": "approval",
+      "imageUrl": "https://img.shareit.kr/prod/img/2021-04-30/1e20d565-aae5-4342-b3a9-e8fda182afb5.jpg",
+      "hostName": "라율아트홀&갤러리",
+      "venueName": "회의실3",
+      "address": "서울 서초구 반포대로 20",
+      "pricePerHour": 12000,
+      "minHour": 1
+    },
+    {
+      "id": 14,
+      "type": "approval",
+      "imageUrl": "https://img.shareit.kr/prod/img/2021-04-30/ff730ccc-41a9-4567-90de-07330064e31f.jpg",
+      "hostName": "라율아트홀&갤러리",
+      "venueName": "회의실2",
+      "address": "서울 서초구 반포대로 20",
+      "pricePerHour": 15000,
+      "minHour": 1
+    },
+    {
+      "id": 15,
+      "type": "approval",
+      "imageUrl": "https://img.shareit.kr/prod/img/2021-04-30/4967dd28-b233-49cb-ba69-764f33a4881e.jpg",
+      "hostName": "라율아트홀&갤러리",
+      "venueName": "회의실1",
+      "address": "서울 서초구 반포대로 20",
+      "pricePerHour": 20000,
+      "minHour": 1
+    },
+    {
+      "id": 16,
+      "type": "realtime",
+      "imageUrl": "https://img.shareit.kr/prod/img/2021-04-30/7ed98fe5-0849-4e6e-9106-2a019fd5d9e5.jpg",
+      "hostName": "라율아트홀&갤러리",
+      "venueName": "카페",
+      "address": "서울 서초구 반포대로 20",
+      "pricePerHour": 20000,
+      "minHour": 2
+    },
+    {
+      "id": 17,
+      "type": "realtime",
+      "imageUrl": "https://img.shareit.kr/prod/img/2021-04-26/f89241cb-ff54-4373-8bba-e459cd8ba383.jpg",
+      "hostName": "세컨드라이브러리",
+      "venueName": "코워킹카페",
+      "address": "서울특별시 강남구 영동대로137길 6 1층",
+      "pricePerHour": 2000,
+      "minHour": 1
+    },
+    {
+      "id": 18,
+      "type": "realtime",
+      "imageUrl": "https://img.shareit.kr/prod/img/2021-05-24/6f2b6470-e7d8-47f5-856e-a5d4506828a0.jpg",
+      "hostName": "빌라드109_4호점",
+      "venueName": "자연광 렌탈 스튜디오",
+      "address": "서울 마포구 토정로 46",
+      "pricePerHour": 88000,
+      "minHour": 2
+    },
+    {
+      "id": 19,
+      "type": "approval",
+      "imageUrl": "https://img.shareit.kr/prod/img/2021-05-24/7c0eaaa5-a6e3-4920-99e3-1a00124b4e02.jpg",
+      "hostName": "빌라드109_3호점",
+      "venueName": "자연광 렌탈 스튜디오",
+      "address": "서울 마포구 독막로8길 31",
+      "pricePerHour": 66000,
+      "minHour": 2
+    },
+    {
+      "id": 20,
+      "type": "approval",
+      "imageUrl": "https://img.shareit.kr/prod/img/2021-05-24/e54b2ce1-3cdf-4263-94c7-00cb9ce019c1.jpg",
+      "hostName": "빌라드109_2호점",
+      "venueName": "자연광 렌탈 스튜디오",
+      "address": "서울 마포구 독막로8길 12",
+      "pricePerHour": 88000,
+      "minHour": 2
+    },
+    {
+      "id": 21,
+      "type": "approval",
+      "imageUrl": "https://img.shareit.kr/prod/img/2021-05-24/208d2240-14ab-49bd-983a-ae16954a7bc3.jpg",
+      "hostName": "스튜디오온",
+      "venueName": "화이트톤 자연광 스튜디오",
+      "address": "서울 마포구 월드컵로 114",
+      "pricePerHour": 5000,
+      "minHour": 6
+    },
+    {
+      "id": 22,
+      "type": "realtime",
+      "imageUrl": "https://img.shareit.kr/prod/img/2021-06-03/9a2b9133-6b4c-4cba-9367-b2404973ae13.jpg",
+      "hostName": "베뉴 연남",
+      "venueName": "스튜디오",
+      "address": "서울 마포구 연남동 387-45",
+      "pricePerHour": 35000,
+      "minHour": 1
+    },
+    {
+      "id": 23,
+      "type": "realtime",
+      "imageUrl": "https://img.shareit.kr/prod/img/2021-05-14/d166d5cd-43b6-4619-8423-3a08e0e32d11.jpg",
+      "hostName": "스튜디오두캣",
+      "venueName": "자연광 파티룸(배경지有)",
+      "address": "서울 마포구 희우정로 108",
+      "pricePerHour": 40000,
+      "minHour": 2
+    },
+    {
+      "id": 24,
+      "type": "approval",
+      "imageUrl": "https://img.shareit.kr/prod/img/2021-05-10/5aa3c718-e01e-4a13-b05e-74e9b00ed4f2.jpg",
+      "hostName": "한걸음댄스연습실 1호점",
+      "venueName": "신촌 한걸음연습실 1호점",
+      "address": "서울특별시 마포구 노고산동 56-23 지하 1층",
+      "pricePerHour": 60000,
+      "minHour": 1
+    },
+    {
+      "id": 25,
+      "type": "approval",
+      "imageUrl": "https://img.shareit.kr/prod/img/2021-05-18/e8286c0d-dc1a-4077-9913-6eee576c3545.jpg",
+      "hostName": "더웨이브스튜디오",
+      "venueName": "H ROOM",
+      "address": "서울 마포구 방울내로 47",
+      "pricePerHour": 110000,
+      "minHour": 2
+    },
+    {
+      "id": 26,
+      "type": "approval",
+      "imageUrl": "https://img.shareit.kr/prod/img/2021-05-14/b6724c1e-70ef-49c7-a315-d273bf13312a.jpg",
+      "hostName": "더웨이브스튜디오",
+      "venueName": "4B ROOM",
+      "address": "서울 마포구 방울내로 47",
+      "pricePerHour": 132000,
+      "minHour": 2
+    },
+    {
+      "id": 27,
+      "type": "realtime",
+      "imageUrl": "https://img.shareit.kr/prod/img/2021-06-02/1c423641-ffa9-4cc7-a11c-53330c0fbfd4.jpg",
+      "hostName": "블레스짐",
+      "venueName": "블레스짐 1:1피티샵",
+      "address": "경기 부천시 중동로254번길 81",
+      "pricePerHour": 20000,
+      "minHour": 1
+    },
+    {
+      "id": 28,
+      "type": "realtime",
+      "imageUrl": "https://img.shareit.kr/prod/img/2021-06-01/b9782ddc-381b-41fe-9c69-dbeb21333644.jpg",
+      "hostName": "바스농구클럽(매봉점)",
+      "venueName": "[강남/농구]실내체육관",
+      "address": "서울 강남구 남부순환로377길 7",
+      "pricePerHour": 60000,
+      "minHour": 1
+    },
+    {
+      "id": 29,
+      "type": "realtime",
+      "imageUrl": "https://img.shareit.kr/prod/img/2021-06-01/c2fc2e2c-1866-43c1-8c5b-38ce326a70b6.jpg",
+      "hostName": "바스농구클럽(개포점)",
+      "venueName": "[강남/농구]실내체육관",
+      "address": "서울 강남구 논현로6길 17",
+      "pricePerHour": 80000,
+      "minHour": 1
+    },
+    {
+      "id": 30,
+      "type": "approval",
+      "imageUrl": "https://img.shareit.kr/prod/img/2021-05-26/c53634a6-d640-4413-bfeb-102790dcd5b6.jpg",
+      "hostName": "리본휘트니스(수지)",
+      "venueName": "퍼스널트레이닝",
+      "address": "경기 용인시 수지구 성복2로76번길 26-3",
+      "pricePerHour": 16000,
+      "minHour": 1
+    },
+    {
+      "id": 31,
+      "type": "approval",
+      "imageUrl": "https://img.shareit.kr/prod/img/2021-06-01/89aba941-a366-4df9-8b6a-4e61b95cac07.jpg",
+      "hostName": "제이비스포츠",
+      "venueName": "메인체육관",
+      "address": "경기 용인시 수지구 신봉동 942-1",
+      "pricePerHour": 40000,
+      "minHour": 1
+    },
+    {
+      "id": 32,
+      "type": "approval",
+      "imageUrl": "https://img.shareit.kr/prod/img/2021-06-01/cf636202-9696-452a-9368-0c2c805ab6c7.jpg",
+      "hostName": "리얼농구교실",
+      "venueName": "[남양주/농구]실내체육관",
+      "address": "경기 남양주시 진건읍 사릉로 303",
+      "pricePerHour": 40000,
+      "minHour": 1
+    },
+    {
+      "id": 33,
+      "type": "realtime",
+      "imageUrl": "https://img.shareit.kr/prod/img/2021-06-03/1d7f9952-0004-4837-bce4-38c453a4ae92.jpg",
+      "hostName": "업스포츠",
+      "venueName": "[남양주/농구]실내체육관",
+      "address": "경기 남양주시 경춘로1283번길 11-4",
+      "pricePerHour": 80000,
+      "minHour": 2
+    },
+    {
+      "id": 34,
+      "type": "realtime",
+      "imageUrl": "https://img.shareit.kr/prod/img/2021-05-18/3817e7af-8697-4c40-9cb3-c6cdde11606b.jpg",
+      "hostName": "(주)반포중앙스포츠 반포점",
+      "venueName": "[서초/농구]체육관부분2",
+      "address": "서울 서초구 반포대로39길 70",
+      "pricePerHour": 30000,
+      "minHour": 60
+    },
+    {
+      "id": 35,
+      "type": "realtime",
+      "imageUrl": "https://img.shareit.kr/prod/img/2021-05-18/fe8a2877-c1e8-419a-bd63-33bf77719bad.jpg",
+      "hostName": "(주)반포중앙스포츠 반포점",
+      "venueName": "[서초/농구]체육관부분1",
+      "address": "서울 서초구 반포대로39길 70",
+      "pricePerHour": 30000,
+      "minHour": 60
+    },
+    {
+      "id": 36,
+      "type": "realtime",
+      "imageUrl": "https://img.shareit.kr/prod/img/2021-06-03/005050b8-d4cb-4692-ba46-8d0803698cd4.jpg",
+      "hostName": "인하대학교",
+      "venueName": "산책길",
+      "address": "인천광역시 미추홀구 인하로 100",
+      "pricePerHour": 440000,
+      "minHour": 4
+    },
+    {
+      "id": 37,
+      "type": "approval",
+      "imageUrl": "https://img.shareit.kr/prod/img/2021-06-02/8cb1b3b4-bf26-4b73-a2b7-fe3adadf5743.jpg",
+      "hostName": "인하대학교",
+      "venueName": "PC강의실",
+      "address": "인천광역시 미추홀구 인하로 100",
+      "pricePerHour": 132000,
+      "minHour": 4
+    },
+    {
+      "id": 38,
+      "type": "realtime",
+      "imageUrl": "https://img.shareit.kr/prod/img/2021-05-07/9175537a-0be1-4455-a4a8-d5a520346ce8.jpg",
+      "hostName": "삼육대학교",
+      "venueName": "기자회견장",
+      "address": "서울특별시 노원구 화랑로 815",
+      "pricePerHour": 880000,
+      "minHour": 4
+    },
+    {
+      "id": 39,
+      "type": "approval",
+      "imageUrl": "https://img.shareit.kr/prod/img/2021-04-29/e44e5652-ed6b-4857-9bb8-742dea907d9c.jpg",
+      "hostName": "삼육대학교",
+      "venueName": "소형 회의실",
+      "address": "서울특별시 노원구 화랑로 815",
+      "pricePerHour": 88000,
+      "minHour": 4
+    },
+    {
+      "id": 40,
+      "type": "realtime",
+      "imageUrl": "https://img.shareit.kr/prod/img/2021-03-24/61056597-461e-4c7c-a6d5-91485a71132c.jpg",
+      "hostName": "감리교신학대학교",
+      "venueName": "강당",
+      "address": "서울특별시 서대문구 독립문로 56",
+      "pricePerHour": 528000,
+      "minHour": 4
+    },
+    {
+      "id": 41,
+      "type": "approval",
+      "imageUrl": "https://img.shareit.kr/prod/img/2021-03-24/8ef324a3-b520-49fc-ad0e-56bc76f4406b.jpg",
+      "hostName": "감리교신학대학교",
+      "venueName": "예배실",
+      "address": "서울특별시 서대문구 독립문로 56",
+      "pricePerHour": 20000,
+      "minHour": 1
+    },
+    {
+      "id": 42,
+      "type": "realtime",
+      "imageUrl": "https://img.shareit.kr/item/img/2087_0.jpg",
+      "hostName": "서울여자대학교",
+      "venueName": "삼각숲",
+      "address": "서울특별시 노원구 화랑로 621",
+      "pricePerHour": 30000,
+      "minHour": 2
+    },
+    {
+      "id": 43,
+      "type": "approval",
+      "imageUrl": "https://img.shareit.kr/item/img/2081_1.jpg",
+      "hostName": "서울여자대학교",
+      "venueName": "바롬기념관",
+      "address": "서울특별시 노원구 화랑로 621",
+      "pricePerHour": 8000,
+      "minHour": 1
+    },
+    {
+      "id": 44,
+      "type": "realtime",
+      "imageUrl": "https://img.shareit.kr/item/img/2058_0.jpg",
+      "hostName": "성공회대학교",
+      "venueName": "존데일리 홀",
+      "address": "서울특별시 구로구 오류2동 연동로 320",
+      "pricePerHour": 660000,
+      "minHour": 4
+    },
+    {
+      "id": 45,
+      "type": "approval",
+      "imageUrl": "https://img.shareit.kr/item/img/2050_0.jpg",
+      "hostName": "성공회대학교",
+      "venueName": "이제민 홀",
+      "address": "서울특별시 구로구 오류2동 연동로 320",
+      "pricePerHour": 308000,
+      "minHour": 3
+    },
+    {
+      "id": 46,
+      "type": "realtime",
+      "imageUrl": "https://img.shareit.kr/item/img/1915_1.jpg",
+      "hostName": "국제대학교",
+      "venueName": "소형 강의실",
+      "address": "경기도 평택시 장안웃길 56",
+      "pricePerHour": 88000,
+      "minHour": 5
+    },
+    {
+      "id": 47,
+      "type": "approval",
+      "imageUrl": "https://img.shareit.kr/item/img/1922_1.jpg",
+      "hostName": "국제대학교",
+      "venueName": "소강당",
+      "address": "경기도 평택시 장안웃길 56",
+      "pricePerHour": 220000,
+      "minHour": 2
+    },
+    {
+      "id": 48,
+      "type": "realtime",
+      "imageUrl": "https://img.shareit.kr/item/img/1832_1.jpg",
+      "hostName": "명지대학교",
+      "venueName": "그룹스터디룸",
+      "address": "서울특별시 서대문구 거북골로 34",
+      "pricePerHour": 15000,
+      "minHour": 2
+    },
+    {
+      "id": 49,
+      "type": "approval",
+      "imageUrl": "https://img.shareit.kr/item/img/1830_1.jpg",
+      "hostName": "명지대학교",
+      "venueName": "인터렉티브가든",
+      "address": "서울특별시 서대문구 거북골로 34",
+      "pricePerHour": 300000,
+      "minHour": 2
+    },
+    {
+      "id": 50,
+      "type": "realtime",
+      "imageUrl": "https://img.shareit.kr/item/img/1770_7.jpg",
+      "hostName": "가천대학교",
+      "venueName": "썬큰광장",
+      "address": "경기도 성남시 수정구 성남대로 1342",
+      "pricePerHour": 40000,
+      "minHour": 2
+    }
+  ]
+}
