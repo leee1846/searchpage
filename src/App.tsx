@@ -1,13 +1,13 @@
 import React from "react";
 import GlobalStyle from "./styles/reset";
-import Header from "./components/Header/index";
 import Layout from "./styles/Layout";
+import SearchPage from "./pages/SearchPage";
 
 function App() {
   return (
     <Layout>
       <GlobalStyle />
-      <Header />
+      <SearchPage />
     </Layout>
   );
 }
