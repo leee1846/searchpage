@@ -34,14 +34,18 @@ export const Name = Styled.p`
   margin-right:12px;
 `;
 
-export const Type = Styled.p`
+interface TypeProps {
+  isTypeApproval: boolean;
+}
+export const Type = Styled.p<TypeProps>`
   display: inline-flex;
   align-items:center;
   justify-content:center;
   height:24px;
   padding: 0 12px 0 12px;
   border-radius: 12px;
-  background-color: #5ac7ff;
+  background-color: ${({ isTypeApproval }) =>
+    isTypeApproval ? "#5ac7ff" : "#0077ed"};
   font-size: 14px;
   font-weight: 500;
   letter-spacing: -0.7px;

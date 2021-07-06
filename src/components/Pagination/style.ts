@@ -14,11 +14,14 @@ export const Img = Styled.img`
   cursor:pointer;
 `;
 
-export const Span = Styled.span`
+interface SpanProps {
+  isClicked: boolean;
+}
+export const Span = Styled.span<SpanProps>`
   font-size: 16px;
   font-weight: 300;
   letter-spacing: -0.8px;
-  color: #5e5e5e;
+  color: ${({ isClicked }) => (isClicked ? "red" : "#5e5e5e")};
   margin: 0 17px;
   cursor:pointer;
 `;

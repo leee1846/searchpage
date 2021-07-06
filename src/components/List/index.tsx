@@ -1,4 +1,5 @@
-import React from "react";
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { useState, useEffect } from "react";
 import ListTitle from "./../ListTitle/index";
 import * as S from "./style";
 import Item from "./../Item/index";
@@ -12,15 +13,26 @@ const List = () => {
   const venueList = useSelector<ReducerType, typeof venueState>(
     (state) => state.venueSlice
   );
-  console.log(venueList);
+  const [pageNumber, setPageNumber] = useState(1);
+  const [venueListPerPage, setVenueListPerPage] = useState(venueList);
+
+  useEffect(() => {
+    setVenueListPerPage(() =>
+      venueList.filter((item) => {
+        const nextLength = pageNumber * 5;
+
+        return item.id > nextLength - 5 && item.id <= nextLength;
+      })
+    );
+  }, [pageNumber]);
 
   return (
     <S.Container>
-      <ListTitle />
+      <ListTitle amountOfList={venueList.length} />
       <S.TotalLine>
         <S.PageLine />
       </S.TotalLine>
-      {venueList.map((item) => {
+      {venueListPerPage.map((item) => {
         const {
           id,
           imageUrl,
@@ -44,7 +56,11 @@ const List = () => {
           />
         );
       })}
-      <Pagination />
+      <Pagination
+        amountOfVenues={venueList.length}
+        setPageNumber={setPageNumber}
+        pageNumber={pageNumber}
+      />
       <ToTop />
     </S.Container>
   );

@@ -1,6 +1,6 @@
-import React from "react";
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { useState, useEffect } from "react";
 import * as S from "./style";
-import testImg from "../../assets/images/test.jpg";
 
 interface Props {
   imgUrl: string;
@@ -20,7 +20,13 @@ const Item = ({
   pricePerHour,
   minHour,
 }: Props) => {
+  const [isTypeApproval, setIsTypeApproval] = useState(false);
+
   const minPrice = pricePerHour * minHour;
+
+  useEffect(() => {
+    setIsTypeApproval(() => type === "approval");
+  }, []);
 
   return (
     <S.Container>
@@ -31,7 +37,9 @@ const Item = ({
             <S.Name>
               {hostName} / {venueName}
             </S.Name>
-            <S.Type>{type}</S.Type>
+            <S.Type isTypeApproval={isTypeApproval}>
+              {isTypeApproval ? "승인" : "실시간"}
+            </S.Type>
           </S.TitleBox>
           <S.Address>{address}</S.Address>
         </div>

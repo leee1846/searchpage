@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import * as data from "../../venueSample.json";
 
-export const venueState = data.venueList.filter((item) => item.id < 6);
+export const venueState = data.venueList;
 
 const venueSlice = createSlice({
   name: "venue",
