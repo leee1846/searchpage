@@ -15,6 +15,7 @@ const List = () => {
   );
   const [pageNumber, setPageNumber] = useState(1);
   const [venueListPerPage, setVenueListPerPage] = useState(venueList);
+  const [scrollReady, setScrollReady] = useState(false);
 
   useEffect(() => {
     if (venueList) {
@@ -29,6 +30,15 @@ const List = () => {
       setVenueListPerPage([]);
     }
   }, [venueList, pageNumber]);
+
+  window.addEventListener("scroll", () => {
+    if (document.documentElement.scrollTop > 60) {
+      setScrollReady(true);
+    } else {
+      setScrollReady(false);
+    }
+  });
+
   return (
     <S.Container>
       <ListTitle amountOfList={venueList ? venueList?.length : 0} />
@@ -70,7 +80,7 @@ const List = () => {
         setPageNumber={setPageNumber}
         pageNumber={pageNumber}
       />
-      <ToTop />
+      {scrollReady ? <ToTop /> : null}
     </S.Container>
   );
 };

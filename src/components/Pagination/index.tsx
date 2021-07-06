@@ -10,9 +10,9 @@ interface Props {
   pageNumber: number;
 }
 const Pagination = ({ amountOfVenues, setPageNumber, pageNumber }: Props) => {
-  const [currentPages, setCurrentPages] = useState<number[]>([]);
-
+  const [pageList, setPageList] = useState<number[]>([]);
   const totalPages = Math.ceil(amountOfVenues / 5);
+
   const countPages = () => {
     const countedPages = [];
     if (totalPages < 6) {
@@ -32,7 +32,7 @@ const Pagination = ({ amountOfVenues, setPageNumber, pageNumber }: Props) => {
   };
 
   useEffect(() => {
-    setCurrentPages(() => countPages());
+    setPageList(() => countPages());
   }, [amountOfVenues]);
 
   const onPageNumberClick = (pageNumber: number) => {
@@ -40,11 +40,11 @@ const Pagination = ({ amountOfVenues, setPageNumber, pageNumber }: Props) => {
   };
 
   const onLeftClick = () => {
-    const firstLength = currentPages[0];
+    const firstLength = pageList[0];
     if (pageNumber > 1) {
       setPageNumber((prevNumber) => prevNumber - 1);
       if (pageNumber === firstLength) {
-        setCurrentPages((prev) => {
+        setPageList((prev) => {
           return prev.map((pageNum) => pageNum - 1);
         });
       }
@@ -52,11 +52,11 @@ const Pagination = ({ amountOfVenues, setPageNumber, pageNumber }: Props) => {
   };
 
   const onRightClick = () => {
-    const lastLength = currentPages[currentPages.length - 1];
+    const lastLength = pageList[pageList.length - 1];
     if (pageNumber < totalPages) {
       setPageNumber((prevNumber) => prevNumber + 1);
       if (pageNumber === lastLength) {
-        setCurrentPages((prev) => {
+        setPageList((prev) => {
           return prev.map((pageNum) => pageNum + 1);
         });
       }
@@ -66,7 +66,7 @@ const Pagination = ({ amountOfVenues, setPageNumber, pageNumber }: Props) => {
   return (
     <S.Container>
       <S.Img src={leftIcon} alt='이전으로' onClick={onLeftClick} />
-      {currentPages.map((page) => (
+      {pageList.map((page) => (
         <S.Span
           key={page}
           isClicked={page === pageNumber}

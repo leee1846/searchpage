@@ -11,15 +11,15 @@ const venueSlice = createSlice({
   reducers: {
     searchList: (state, { payload }: PayloadAction<{ inputValue: string }>) => {
       const inputValue = payload.inputValue.replace(/\s/gi, "");
-      const filteredList = venueList.filter((list) => {
-        const contentToCompare = (
+
+      return venueList.filter((list) => {
+        const contentsToCompare = (
           list.hostName +
           list.venueName +
           list.address
         ).replace(/\s/gi, "");
-        return contentToCompare.includes(inputValue);
+        return contentsToCompare.includes(inputValue);
       });
-      return filteredList;
     },
   },
 });
