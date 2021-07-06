@@ -1,0 +1,12 @@
+<svg id="arrow-up-aeaeae" xmlns="http://www.w3.org/2000/svg" width="12px" height="6px" viewBox="0, 0, 13, 9">
+  <path
+    id="arrow-up-aeaeae-p"
+    d="M 0.5, 7.5
+       L 6.5, 1.5
+       L 12.5, 7.5"
+    fill="none"
+    stroke="#878787"
+    stroke-linecap="round"
+    stroke-width="1.5"
+  />
+</svg>
