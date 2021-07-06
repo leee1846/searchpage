@@ -3,10 +3,12 @@ import searchIcon from "../../assets/images/search.png";
 import { searchList } from "../../stores/GetVenueReducer";
 import { useDispatch } from "react-redux";
 import * as S from "./style";
+import { changePageNumber } from "../../stores/PageNumberReducer";
 
 const Input = () => {
   const dispatch = useDispatch();
   const [inputValue, setInputValue] = useState("");
+
   const onInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInputValue(e.target.value);
   };
@@ -15,6 +17,7 @@ const Input = () => {
     e.preventDefault();
     if (inputValue) {
       dispatch(searchList({ inputValue }));
+      dispatch(changePageNumber(1));
     }
   };
 

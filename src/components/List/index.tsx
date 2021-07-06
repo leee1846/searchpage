@@ -13,31 +13,41 @@ const List = () => {
   const venueList = useSelector<ReducerType, typeof venueState>(
     (state) => state.venueSlice
   );
-  const [pageNumber, setPageNumber] = useState(1);
+  const pageNumber = useSelector<ReducerType, number>(
+    (state) => state.pageNumberSlice
+  );
   const [venueListPerPage, setVenueListPerPage] = useState(venueList);
   const [scrollReady, setScrollReady] = useState(false);
 
   useEffect(() => {
     if (venueList) {
-      setVenueListPerPage(() =>
-        venueList.filter((item, index) => {
+      setVenueListPerPage(() => {
+        return venueList.filter((item, index) => {
           const nextLength = pageNumber * 5;
           const id = index + 1;
+          console.log(nextLength - 5);
           return id > nextLength - 5 && id <= nextLength;
-        })
-      );
+        });
+      });
     } else {
       setVenueListPerPage([]);
     }
   }, [venueList, pageNumber]);
 
-  window.addEventListener("scroll", () => {
-    if (document.documentElement.scrollTop > 60) {
-      setScrollReady(true);
-    } else {
-      setScrollReady(false);
-    }
-  });
+  useEffect(() => {
+    const scrollEvent = () => {
+      if (document.documentElement.scrollTop > 60) {
+        setScrollReady(true);
+      } else {
+        setScrollReady(false);
+      }
+    };
+
+    window.addEventListener("scroll", scrollEvent);
+    return () => {
+      window.removeEventListener("scroll", scrollEvent);
+    };
+  }, []);
 
   return (
     <S.Container>
@@ -77,7 +87,6 @@ const List = () => {
       )}
       <Pagination
         amountOfVenues={venueList ? venueList?.length : 1}
-        setPageNumber={setPageNumber}
         pageNumber={pageNumber}
       />
       {scrollReady ? <ToTop /> : null}

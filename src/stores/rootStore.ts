@@ -1,9 +1,11 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import venueSlice from "./GetVenueReducer/index";
 import logger from "redux-logger";
+import pageNumberSlice from "./PageNumberReducer/index";
 
 const reducer = combineReducers({
   venueSlice,
+  pageNumberSlice,
 });
 
 const store = configureStore({
