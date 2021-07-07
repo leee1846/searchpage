@@ -25,7 +25,6 @@ const List = () => {
         return venueList.filter((item, index) => {
           const nextLength = pageNumber * 5;
           const id = index + 1;
-          console.log(nextLength - 5);
           return id > nextLength - 5 && id <= nextLength;
         });
       });
