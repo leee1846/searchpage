@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import * as data from "../../venueSample.json";
+import data from "../../venueSample.json";
 
 const venueList = data.venueList;
 

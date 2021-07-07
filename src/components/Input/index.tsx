@@ -18,6 +18,8 @@ const Input = () => {
     if (inputValue) {
       dispatch(searchVenueList({ inputValue }));
       dispatch(changePageNumber(1));
+    } else {
+      window.alert("검색어를 입력해주세요.");
     }
   };
 
