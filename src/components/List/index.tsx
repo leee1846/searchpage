@@ -8,31 +8,23 @@ import ToTop from "./../ToTop/index";
 import { useSelector } from "react-redux";
 import { ReducerType } from "../../stores/rootStore";
 import { venueState } from "../../stores/GetVenueReducer";
+import useGetVenueList from "./../../hooks/useGetVenueList";
+import Loading from "./../Loading/index";
 
 const List = () => {
   const venueList = useSelector<ReducerType, typeof venueState>(
     (state) => state.venueSlice
   );
-  const pageNumber = useSelector<ReducerType, number>(
+  const currentPageNumber = useSelector<ReducerType, number>(
     (state) => state.pageNumberSlice
   );
-  const [venueListPerPage, setVenueListPerPage] = useState(venueList);
   const [scrollReady, setScrollReady] = useState(false);
+  const [venueListPerPage, isError, isLoading] = useGetVenueList(
+    venueList,
+    currentPageNumber
+  );
 
-  useEffect(() => {
-    if (venueList) {
-      setVenueListPerPage(() => {
-        return venueList.filter((item, index) => {
-          const nextLength = pageNumber * 5;
-          const id = index + 1;
-          return id > nextLength - 5 && id <= nextLength;
-        });
-      });
-    } else {
-      setVenueListPerPage([]);
-    }
-  }, [venueList, pageNumber]);
-
+  // scrollTop에 맞는 toTop버튼 유/무
   useEffect(() => {
     const scrollEvent = () => {
       if (document.documentElement.scrollTop > 60) {
@@ -41,13 +33,19 @@ const List = () => {
         setScrollReady(false);
       }
     };
-
     window.addEventListener("scroll", scrollEvent);
     return () => {
       window.removeEventListener("scroll", scrollEvent);
     };
   }, []);
 
+  if (isError)
+    return (
+      <S.Box>
+        <p>404 Error</p>
+      </S.Box>
+    );
+  if (isLoading) return <Loading />;
   return (
     <S.Container>
       <ListTitle amountOfList={venueList ? venueList?.length : 0} />
@@ -86,11 +84,11 @@ const List = () => {
       )}
       <Pagination
         amountOfVenues={venueList ? venueList?.length : 1}
-        pageNumber={pageNumber}
+        pageNumber={currentPageNumber}
       />
       {scrollReady ? <ToTop /> : null}
     </S.Container>
   );
 };
 
-export default List;
+export default React.memo(List);

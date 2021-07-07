@@ -14,28 +14,30 @@ interface Props {
 const Pagination = ({ amountOfVenues, pageNumber }: Props) => {
   const dispatch = useDispatch();
   const [pageList, setPageList] = useState<number[]>([]);
-  const totalPages = Math.ceil(amountOfVenues / 5);
+  const amountOfPages = Math.ceil(amountOfVenues / 5);
 
-  const countPages = () => {
-    const countedPages = [];
-    if (totalPages < 6) {
-      if (!totalPages) {
-        countedPages.push(1);
+  // 화면에 보여질 pagination 번호 계산함수
+  const calculatePages = () => {
+    const pages = [];
+    if (amountOfPages < 6) {
+      if (!amountOfPages) {
+        pages.push(1);
       } else {
-        for (let i = 0; i < totalPages; i++) {
-          countedPages.push(i + 1);
+        for (let i = 0; i < amountOfPages; i++) {
+          pages.push(i + 1);
         }
       }
-      return countedPages;
+      return pages;
     }
     for (let i = 1; i <= 5; i++) {
-      countedPages.push(i);
+      pages.push(i);
     }
-    return countedPages;
+    return pages;
   };
 
+  // 화면에 보여지는 venue리스트 변경시 pagination 다시계산
   useEffect(() => {
-    setPageList(() => countPages());
+    setPageList(() => calculatePages());
   }, [amountOfVenues]);
 
   const onPageNumberClick = (currentPage: number) => {
@@ -58,7 +60,7 @@ const Pagination = ({ amountOfVenues, pageNumber }: Props) => {
 
   const onRightClick = () => {
     const lastLength = pageList[pageList.length - 1];
-    if (pageNumber < totalPages) {
+    if (pageNumber < amountOfPages) {
       dispatch(changePageNumber(pageNumber + 1));
       if (pageNumber === lastLength) {
         setPageList((prev) => {
@@ -86,4 +88,4 @@ const Pagination = ({ amountOfVenues, pageNumber }: Props) => {
   );
 };
 
-export default Pagination;
+export default React.memo(Pagination);

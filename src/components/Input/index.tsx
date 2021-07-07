@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import searchIcon from "../../assets/images/search.png";
-import { searchList } from "../../stores/GetVenueReducer";
+import { searchVenueList } from "../../stores/GetVenueReducer";
 import { useDispatch } from "react-redux";
 import * as S from "./style";
 import { changePageNumber } from "../../stores/PageNumberReducer";
@@ -16,7 +16,7 @@ const Input = () => {
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (inputValue) {
-      dispatch(searchList({ inputValue }));
+      dispatch(searchVenueList({ inputValue }));
       dispatch(changePageNumber(1));
     }
   };
