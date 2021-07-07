@@ -27,7 +27,7 @@ const List = () => {
   // scrollTop에 맞는 toTop버튼 유/무
   useEffect(() => {
     const scrollEvent = () => {
-      if (document.documentElement.scrollTop > 60) {
+      if (document.documentElement.scrollTop > 200) {
         setScrollReady(true);
       } else {
         setScrollReady(false);
